@@ -7,16 +7,22 @@ Maticals: http://maticals.senin.world/
 Now available:
 
 
-Maticals GLSL Player - glsl shaders player. Analogue http://shadertoy.com/ .
+# Maticals GLSL Player - glsl shaders player.
+Analogue http://shadertoy.com/ .
 
-Player:
+## Player:
+
 /mgplayer.html
+
 /players/mgplayer.js
 
-Shaders:
+## Shaders:
+
 /shaders/
 
-Demo:
+## Demo:
+
 https://mikelsv.github.io/maticals/mgplayer.html
+
 http://senin.world?page=opengl
 
