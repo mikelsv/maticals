@@ -1,0 +1,32 @@
+<canvas id="msplayer" width="800" height="600"></canvas>
+
+<script src="player/mgplayer.js" type="text/javascript"></script>
+
+<script>
+// Load code
+fetch("/pulse.glsl")
+.then(response => response.text())
+.then((data) => {
+  if(data == "404 Not Found")
+    data = MsPlayerCodeFail;
+
+  //MsPlayer.SetValue("vec2", "units_pos", [0, 0]);
+  //MsPlayer.SetValue("vec2", "units_pos", 0);
+
+  MsPlayer.SetCode(data);
+  MsPlayer.Init();
+
+  //MsPlayer.SetTexture('/images/bg.jpg', 0);
+  
+})
+.catch( err => {
+  MsPlayer.SetCode(MsPlayerCodeFail);
+  MsPlayer.Init();
+});
+
+//MsPlayer.Init();
+
+
+</script>
+
+<button onclick="MsPlayer.RequestFullScreen();">Full Screen</button>
